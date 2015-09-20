@@ -1,0 +1,541 @@
+html {overflow-y: scroll; overflow-x: hidden;}
+body {
+	font-family: Verdana,"PT Sans", "Trebuchet MS", Arial, Tahoma, sans-serif;
+	background:#ffffff;
+	color: #000;
+}
+
+img, object, iframe{
+max-width: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+.wrapper {
+	width: 96%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header:after {content:"";height:0;display:block;visibility:hidden;clear:both;}
+.header {
+	background: #ffffff;
+	border-bottom: 0.1em solid #C7A500;
+}
+.header .logo {
+	float: left;
+	text-shadow: none;
+	color: transparent;
+	padding: 0.36% 0;
+	margin: 0 0 0 -0.6%;
+}
+
+.logo {
+	position: absolute;
+}
+
+.logo img {
+	width: 50%;
+}
+
+.header .logo a {
+	color:#222;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+}
+.header .nav {
+text-align: center;
+float: right;
+margin: 0;
+z-index: 99999999;
+}
+.header .nav li {
+display: inline-block;
+margin: 0 0 0 5em; /*** don't know how to change to % ***/
+list-style: none;
+}
+
+.header .nav li a {
+    color: #000;
+	font-size: 0.9em;
+    text-decoration: none;
+    display: block;
+    line-height: 5em;
+    padding: 2.33em 0; /*** <a> height will be diffrent if change to % ***/
+    text-align: center;
+    white-space: nowrap;
+}
+.header .nav li.on a {
+	color: #C7A500;
+	border-bottom: 0.1em solid #C7A500;
+}
+.header .nav li a:hover, .header .nav li a:active {color: #C7A500;}
+
+.language {
+	font-size: 0.7em;
+	margin-bottom: -1.2%;
+	margin-left: 93%;
+	text-align: right;
+}
+
+.language a {
+	color: #C7A500;
+}
+
+.language a:hover {color: #222;}
+
+.content {
+	width:100%;
+	text-align: center;
+	min-height: 25em;
+	background: white;
+}
+
+.content-left {
+	display: inline;
+	margin: 0 2%;
+}
+
+.content-left p{
+	font-size:0.8em;
+}
+
+.content-left img, .fit-vids {
+	margin-bottom: 1%;
+}
+
+#home-vid {
+	margin: 2% 1.5% 0 1.5%;
+}
+
+.FullPage {
+	margin: 0 2%;
+}
+
+.FullPage p{
+	font-size:0.8em;
+}
+
+.sidebar{
+	position: fixed;
+	top:10em;
+	display: inline;
+}
+
+.sidebar p{
+	font-size:0.8em;
+}
+
+.footer {
+    background: #ffffff;
+	border-top: 0.1em solid #C7A500;
+    padding: 0.7em 0;
+    font-size: 1em;
+    color: #222;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.footer ul {margin: 0; padding-left: 1%; float: left;}
+.footer ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    text-transform: lowercase;
+}
+.footer ul li:after {content:" | "}
+.footer ul li:last-child:after {content:"";}
+.footer p {
+	font-size:0.71em;
+	margin: 0;
+	text-align: right;
+	padding-right: 1%;
+}
+.footer a {
+	text-decoration: none;
+	color: #222;
+	margin: 0 0.6em;  /*** don't know how to change to % ***/
+}
+
+.footer a:hover {
+	color: #999;
+}
+
+.footer li:first-child a {margin-left: 0.2em;}
+
+
+.column {
+	width: 30.3%;
+	margin: 0 1.5% 0 1.5%;
+	float: left;
+	display: block;
+}
+
+.social{
+	display:none;
+	padding:0;
+	font-size: 3em;
+	margin:1% 0 2.5% 0;
+}
+
+.social a {
+text-decoration: none;
+color: #222;
+margin: 0 0.6em;
+}
+
+.social a:hover {
+	color: #999;
+}
+
+.clients {
+	padding: 0;
+	list-style: none;
+}
+.clients li {
+	width: 19.6%;
+	display: inline-block;
+	text-align: center;
+}
+.clients img {
+	width: 50%;
+}
+
+.screenshot {
+	width: 100%;
+	display: inline-block;
+	padding-bottom: 6%;
+}
+
+.screenshot p {
+	margin: 2% 0 0 0;
+	font-weight: 300;
+	font-size: 0.7em;
+	color:#999;
+}
+
+.screenshot a{
+    text-decoration:none; /* Makes sure the link   doesn't get underlined */
+    z-index:10; /* raises anchor tag above everything else in div */
+    background-color:white; /*workaround to make clickable in IE */
+    filter: alpha(opacity=1); /*workaround to make clickable in IE */
+}
+
+.screenshot a:hover  {
+    opacity: 0.9; /*workaround to make clickable in IE */
+}
+
+.sort {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.sort a{
+  color: #222;
+	text-decoration:none; /* Makes sure the link   doesn't get underlined */
+	font-size:0.7em;
+}
+
+.sort a:hover{color: #C7A500;}
+
+.sort li{
+  float:left;
+  margin: 0 2em 0 0;  /*** don't know how to change to % ***/
+}
+
+.current a{
+  color:#C7A500;
+}
+
+.screenshot img {
+    width: 100%;
+   -moz-box-shadow: 0.125em 0.125em 0.313em #979797;
+   -webkit-box-shadow: 0.125em 0.125em 0.313em #979797;
+   box-shadow: 0.125em 0.125em 0.313em #979797;
+
+}
+
+.PreNext{
+	padding: 0;
+	font-size: 1.5em;
+	margin: 0;
+}
+
+.PreNext a{
+	color:#222;
+}
+
+.PreNext a:hover{
+	color:#999;
+}
+
+.share span {
+	margin-bottom: 2%;
+}
+
+.share-button{
+	color:#C7A500;
+}
+
+.share-button i{
+	margin-bottom: 2%;
+}
+
+/**** Isotope filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/**** slid in effect ****/
+.come-in {
+  -webkit-transform: translateY(150px);
+  -webkit-animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  -webkit-animation-duration: 0.6s;
+}
+
+.already-visible {
+  -webkit-transform: translateY(0);
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+/**** slid in effect ends****/
+
+
+
+/*media queries*/
+
+/*ipad-----*/
+@media screen and (max-width:1024px){
+
+.grid_1,
+.grid_2,
+
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+
+.grid_10,
+.grid_11,
+.grid_12 {
+	width:96.6%;
+}
+
+.clients li {
+	width: 19.4%;
+}
+}
+
+@media screen and (max-width:768px){
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	width:96.6%;
+}
+
+.logo{
+	position: relative;
+	width:100%;
+	font-size:6em;
+	text-align:center;
+	}
+
+.logo img {
+	width: 30%;
+}
+
+.header .nav li {
+	margin: 0 5em 0 0;
+}
+
+.header .nav li a {
+    padding: 0.625em 0; /*** <a> height will be diffrent if change to % ***/
+}
+
+.language {
+	margin-left: 0;
+	text-align: center;
+}
+
+.column {
+	width: 97%;
+}
+
+.sidebar{
+	position: static;
+	margin:0 2% 3% 2%;
+}
+
+.sidebar a:last-child{
+	float: right;
+}
+
+.footer ul {
+width:100%;
+font-size: 3em;
+text-align: center;
+margin-bottom: 2%;
+}
+
+.footer p {
+font-size: 1em;
+text-align: center;
+}
+
+.clients li {
+	width: 19.3%;
+}
+
+}
+
+/*iphone---------*/
+@media screen and (max-width:650px) {
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	width:96.6%;
+}
+
+.logo{
+	width:100%;
+	font-size:6em;
+	text-align:center;
+	}
+
+.logo img {
+	width: 50%;
+}
+
+.header .nav li {
+	margin: 0 4em 0 0;
+}
+
+.sort {
+	display: none;
+}
+
+.column {
+	width: 97%;
+}
+
+.social{
+	display:block;
+}
+
+.footer ul {
+width:100%;
+font-size: 3em;
+text-align: center;
+margin-bottom: 2%;
+}
+
+.footer p {
+font-size: 1em;
+text-align: center;
+}
+
+}
+
+@media screen and (max-width:560px) {
+.logo{
+	font-size:3em;
+	}
+
+.header .nav {
+	padding:0 0 0 1em;
+	float:none;
+}
+
+.header .nav li {
+	margin: 0 5.8% 0 0;
+}
+
+.social{
+	font-size: 2.5em;
+}
+
+.footer ul {
+font-size: 2.5em;
+}
+
+}
+

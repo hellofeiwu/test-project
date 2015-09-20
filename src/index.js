@@ -1,5 +1,8 @@
-var hello = require('./helloworld');
-var math = require('./math');
+'use strict';
 
-console.log(math.degToRads(180));
+var $ = require('jquery');
+var router = require('./router');
 
+$(document).ready(function () {
+   router.init($('body')); 
+});
