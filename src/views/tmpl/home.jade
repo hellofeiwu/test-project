@@ -10,12 +10,17 @@ div.header
                 a(href="./") EN
                 a(href="../") 中文
 
-            ul.nav
-                li.home.on
-                    a(href="index.php") Projects
-                li.about
-                    a(href="about.php") About
-                li.careers
-                    a(href="careers.php") Careers
-                li.contact
-                    a(href="contact.php") Contact
+            nav.navbar.navbar-default
+                div.container-fluid
+                    div.navbar-header
+                        a.navbar-brand(href="index.php") WebSiteName
+                    div
+                      ul.nav.navbar-nav
+                        li.active
+                            a(href="index.php") Projects
+                        li
+                            a(href="about.php") About
+                        li
+                            a(href="careers.php") Careers
+                        li
+                            a(href="contact.php") Contact
