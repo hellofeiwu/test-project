@@ -1,17 +1,10 @@
 'use strict';
 
 var util = require('util');
-var $ = require('jquery');
-
-window.$ = $;
-window.jQuery = $;
-
-require('bootstrap/dist/css/bootstrap.css');
-require('bootstrap');
 
 var BaseView = require('./base-view');
 var homeTmpl = require('./tmpl/home.jade');
-var gallery = require('../gallery');
+var gallery = require('../data/gallery');
 
 //require('./styles/home.css');
 

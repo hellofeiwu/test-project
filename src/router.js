@@ -1,6 +1,7 @@
 'use strict';
 
 var HomeView = require('./views/home-view');
+var Item1View = require('./views/item1-view');
 
 var router = {
     
