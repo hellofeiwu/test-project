@@ -4,53 +4,54 @@ var HomeView = require('./views/home-view');
 var Item1View = require('./views/item1-view');
 
 var router = {
-    
+
     /**
      * @param {JQuery} $container - the parent container for the page
      */
     init: function ($container) {
-        window.addEventListener('hashchange', $.proxy(this.onChange, this));
-        $container.html(this.getPage());
-    },
+        this.$container = $container;
 
-    onChange: function () {
-        this.getPage(this.getFragment());
+        window.addEventListener('hashchange', $.proxy(this.onChange, this));
+        this.renderPage();
     },
 
     getFragment: function () {
         return window.location.hash.replace('#', '');
     },
-    
+
+    onChange: function () {
+        this.renderPage(this.getFragment());
+    },
+
     /**
-     * Gets the current page
-     * @returns {String} the page html
+     * Renders the current page
      */
-    getPage: function (hash) {
+    renderPage: function (hash) {
 
         if (hash === undefined) {
             hash = this.getFragment();
         }
 
-        var view;
+        var content;
         switch (hash) {
             case 'item1':
-                view = new Item1View().render();
+                content = new Item1View().render();
                 break;
             case 'item2':
-                view = new Item2View().render();
+                content = new Item2View().render();
                 break;
             case 'item3':
-                view = new Item3View().render();
+                content = new Item3View().render();
                 break;
             default:
-                view = new HomeView().render();
+                content = new HomeView().render();
                 break;
 
         }
 
-        return view;
+        this.$container.html(content);
     },
-    
+
     /* www.jadeland.org/index.html#home */
 };
 
