@@ -24,3 +24,12 @@ div.header
                             a(href="careers.php") Careers
                         li
                             a(href="contact.php") Contact
+
+            div.gallery
+                ul
+                for image in gallery
+                    li
+                        a(href='##{image.link}')
+                            h3 #{image.name}
+                            p #{image.description}
+                            img(src='#{image.imageSrc}')

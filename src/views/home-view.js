@@ -11,6 +11,7 @@ require('bootstrap');
 
 var BaseView = require('./base-view');
 var homeTmpl = require('./tmpl/home.jade');
+var gallery = require('../gallery');
 
 //require('./styles/home.css');
 
@@ -21,7 +22,11 @@ var HomeView = function () {
 util.inherits(HomeView, BaseView);
 
 HomeView.prototype.render = function () {
-    return homeTmpl();
+    return homeTmpl(
+        {
+            gallery: gallery,
+        }
+    );
 };
 
 module.exports = HomeView;
