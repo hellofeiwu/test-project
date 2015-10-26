@@ -9,6 +9,7 @@ window.jQuery = $;
 
 require('bootstrap/dist/css/bootstrap.css');
 require('bootstrap');
+require('./views/styles/home.css');
 
 $(document).ready(function () {
    router.init($('body')); 

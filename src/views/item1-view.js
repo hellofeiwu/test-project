@@ -5,8 +5,6 @@ var util = require('util');
 var BaseView = require('./base-view');
 var itemTmpl = require('./tmpl/item.jade');
 
-//require('./styles/home.css');
-
 var Item1View = function () {
 
 };

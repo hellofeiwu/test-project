@@ -1,35 +1,8 @@
-div.header
-    div.container.clearfix
-        div.wrapper
+include inc/head.jade
 
-            h1.logo
-                a(href="./")
-                    img(src="img/logo.gif")
-
-            div.language
-                a(href="./") EN
-                a(href="../") 中文
-
-            nav.navbar.navbar-default
-                div.container-fluid
-                    div.navbar-header
-                        a.navbar-brand(href="index.php") WebSiteName
-                    div
-                      ul.nav.navbar-nav
-                        li.active
-                            a(href="index.php") Projects
-                        li
-                            a(href="about.php") About
-                        li
-                            a(href="careers.php") Careers
-                        li
-                            a(href="contact.php") Contact
-
-            div.gallery
-                ul
-                for image in gallery
-                    li
-                        a(href='##{image.link}')
-                            h3 #{image.name}
-                            p #{image.description}
-                            img(src='#{image.imageSrc}')
+ul.container.clearfix
+    for image in gallery
+        li.col-md-4
+            a(href='##{image.link}')
+                img(src='#{image.imageSrc}')
+                p #{image.name}

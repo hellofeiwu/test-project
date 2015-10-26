@@ -6,8 +6,6 @@ var BaseView = require('./base-view');
 var homeTmpl = require('./tmpl/home.jade');
 var gallery = require('../data/gallery');
 
-//require('./styles/home.css');
-
 var HomeView = function () {
 
 };

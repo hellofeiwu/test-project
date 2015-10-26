@@ -8,8 +8,10 @@ module.exports = {
     },
     context: __dirname + "/src",
     entry: "./index.js",
+    devtool: '#inline-source-maps',
     output: {
         path: __dirname + "/dist",
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: '/dist/',
     }
 };
